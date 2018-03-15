@@ -2,8 +2,3 @@
 1	KCL Substantive
 2	GSTT Substantive
 3	KCL Honorary
-4	GSTT Honorary Medical
-5	GSTT Honorary Medical Observer
-6	GSTT Honorary Non-Medical Observer
-7	KCL Visitor
-8	KCL Student
