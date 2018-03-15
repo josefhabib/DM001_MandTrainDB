@@ -1,0 +1,17 @@
+﻿ID	JobTitle	ClinicalRole
+1	Research Associate	Non-Clinical
+2	Research Assistant	Non-Clinical
+3	Student	Non-Clinical
+4	Academic	Non-Clinical
+5	Senior Lecturer	Non-Clinical
+6	Lecturer	Non-Clinical
+7	Professional Services	Non-Clinical
+8	Clinical Academic	Clinical
+9	Clinical Research Fellow	Clinical
+10	Visiting Clinical Research Fellow (observer)	Clinical
+11	Visiting Clinical Research Fellow (medical)	Clinical
+12	Clinical Lecturer	Clinical
+13	Radiologists	Clinical
+14	Radiographer	Clinical
+15	Nurse	Clinical
+16	Midwife	Clinical

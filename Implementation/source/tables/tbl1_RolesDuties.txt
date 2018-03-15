@@ -1,0 +1,17 @@
+﻿ID_Duties	DutyName	DutyCategory
+1	MRI Authorised Worker	2
+2	MRI Authoized Supervisor	2
+3	Paediatrics	4
+4	Neonates	4
+5	Adults	4
+6	Radiation Open Source	2
+7	Radiation Closed Source	2
+9	Medical Cover	1
+10	Clinical Research	1
+11	Human Tissue Act	1
+13	Transfusion	1
+14	First Aider	3
+15	Fire Warden	3
+16	Manual Handling	3
+18	Radiation Protection Supervisor (RPS)	2
+19	Radiation Protection Advisers (RPA)	2

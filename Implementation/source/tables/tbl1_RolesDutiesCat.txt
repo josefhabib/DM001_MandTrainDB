@@ -1,0 +1,5 @@
+﻿ID_DutiesCat	DutyCatDesc
+1	Clinical & Research Duties
+2	Equipment Specific Duties
+3	Operational Duties
+4	Patient/Volunteer Categories

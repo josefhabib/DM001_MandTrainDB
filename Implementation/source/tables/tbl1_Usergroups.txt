@@ -1,0 +1,6 @@
+﻿ID_usergroup	GroupName
+1	SuperUser
+2	Manager
+3	Staff/Student
+4	Trainer
+5	External
