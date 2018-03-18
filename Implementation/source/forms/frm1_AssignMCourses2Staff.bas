@@ -2,7 +2,7 @@
 VersionRequired =20
 Begin Form
     RecordSelectors = NotDefault
-    CloseButton = NotDefault
+    NavigationButtons = NotDefault
     DividingLines = NotDefault
     AllowDesignChanges = NotDefault
     DefaultView =0
@@ -10,22 +10,22 @@ Begin Form
     DatasheetGridlinesBehavior =3
     GridX =24
     GridY =24
-    Width =18105
+    Width =10230
     DatasheetFontHeight =11
-    ItemSuffix =80
-    Right =25485
-    Bottom =12345
+    ItemSuffix =9
+    Right =10485
+    Bottom =10995
     DatasheetGridlinesColor =15132391
     RecSrcDt = Begin
-        0x4efbac351611e540
+        0xecdc3e3ff914e540
     End
-    OnDirty ="[Event Procedure]"
     RecordSource ="tbl1_Staff"
     DatasheetFontName ="Calibri"
     PrtMip = Begin
         0x6801000068010000680100006801000000000000201c0000e010000001000000 ,
         0x010000006801000000000000a10700000100000001000000
     End
+    OnLoad ="[Event Procedure]"
     FilterOnLoad =0
     ShowPageMargins =0
     DisplayOnSharePointSite =1
@@ -49,22 +49,6 @@ Begin Form
             BorderTint =50.0
             ForeThemeColorIndex =0
             ForeTint =50.0
-            GridlineThemeColorIndex =1
-            GridlineShade =65.0
-        End
-        Begin Rectangle
-            SpecialEffect =3
-            BackStyle =0
-            BorderLineStyle =0
-            BackThemeColorIndex =1
-            BorderThemeColorIndex =1
-            BorderShade =65.0
-            GridlineThemeColorIndex =1
-            GridlineShade =65.0
-        End
-        Begin Line
-            BorderLineStyle =0
-            BorderThemeColorIndex =0
             GridlineThemeColorIndex =1
             GridlineShade =65.0
         End
@@ -109,20 +93,36 @@ Begin Form
             PressedForeThemeColorIndex =0
             PressedForeTint =75.0
         End
-        Begin TextBox
-            AddColon = NotDefault
-            FELineBreak = NotDefault
+        Begin ListBox
             BorderLineStyle =0
             LabelX =-1800
             FontSize =11
             FontName ="Calibri"
-            AsianLineBreak =1
+            AllowValueListEdits =1
+            InheritValueList =1
+            ThemeFontIndex =1
             BackThemeColorIndex =1
             BorderThemeColorIndex =1
             BorderShade =65.0
-            ThemeFontIndex =1
             ForeThemeColorIndex =0
             ForeTint =75.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin ComboBox
+            AddColon = NotDefault
+            BorderLineStyle =0
+            LabelX =-1800
+            FontSize =11
+            FontName ="Calibri"
+            AllowValueListEdits =1
+            InheritValueList =1
+            ThemeFontIndex =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =1
+            BorderShade =65.0
+            ForeThemeColorIndex =2
+            ForeShade =50.0
             GridlineThemeColorIndex =1
             GridlineShade =65.0
         End
@@ -134,18 +134,6 @@ Begin Form
             BorderShade =65.0
             ShowPageHeaderAndPageFooter =1
         End
-        Begin UnboundObjectFrame
-            SpecialEffect =2
-            OldBorderStyle =1
-            ThemeFontIndex =1
-            BackThemeColorIndex =1
-            BorderThemeColorIndex =1
-            BorderShade =65.0
-            ForeThemeColorIndex =2
-            ForeShade =50.0
-            GridlineThemeColorIndex =1
-            GridlineShade =65.0
-        End
         Begin EmptyCell
             Height =240
             GridlineColor =12632256
@@ -153,23 +141,54 @@ Begin Form
             GridlineShade =65.0
         End
         Begin FormHeader
-            Height =797
+            Height =542
             BackColor =15064278
             Name ="FormHeader"
+            AutoHeight =255
             AlternateBackThemeColorIndex =1
             AlternateBackShade =95.0
             BackThemeColorIndex =2
             BackTint =20.0
             Begin
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =1050
+                    Top =60
+                    Width =6645
+                    Height =460
+                    FontSize =18
+                    BorderColor =6968388
+                    ForeColor =6968388
+                    Name ="Auto_Header0"
+                    Caption ="Assign Mandatory Training to Staff"
+                    FontName ="Calibri Light"
+                    GroupTable =1
+                    GridlineColor =10921638
+                    HorizontalAnchor =2
+                    LayoutCachedLeft =1050
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =7695
+                    LayoutCachedHeight =520
+                    ColumnStart =1
+                    ColumnEnd =1
+                    LayoutGroup =1
+                    ThemeFontIndex =0
+                    BorderThemeColorIndex =2
+                    BorderTint =100.0
+                    ForeThemeColorIndex =2
+                    ForeTint =100.0
+                    GroupTable =1
+                End
                 Begin Image
                     Left =300
                     Top =60
-                    Width =1575
-                    Height =715
+                    Width =690
+                    Height =460
                     BorderColor =10921638
                     Name ="Auto_Logo0"
                     Picture ="KCL_logo.png"
-                    GroupTable =4
+                    GroupTable =1
                     GridlineColor =10921638
                     ImageData = Begin
                         0x89504e470d0a1a0a0000000d49484452000000e60000009a0806000000bd8a34 ,
@@ -1004,537 +1023,182 @@ Begin Form
 
                     LayoutCachedLeft =300
                     LayoutCachedTop =60
-                    LayoutCachedWidth =1875
-                    LayoutCachedHeight =775
+                    LayoutCachedWidth =990
+                    LayoutCachedHeight =520
                     LayoutGroup =1
-                    GroupTable =4
-                End
-                Begin Label
-                    OverlapFlags =85
-                    TextAlign =1
-                    Left =1935
-                    Top =60
-                    Width =16140
-                    Height =715
-                    FontSize =18
-                    BorderColor =6968388
-                    ForeColor =6968388
-                    Name ="Auto_Header0"
-                    Caption ="Staff Details"
-                    FontName ="Calibri Light"
-                    GroupTable =4
-                    GridlineColor =10921638
-                    HorizontalAnchor =2
-                    LayoutCachedLeft =1935
-                    LayoutCachedTop =60
-                    LayoutCachedWidth =18075
-                    LayoutCachedHeight =775
-                    ColumnStart =1
-                    ColumnEnd =1
-                    LayoutGroup =1
-                    ThemeFontIndex =0
-                    BorderThemeColorIndex =2
-                    BorderTint =100.0
-                    ForeThemeColorIndex =2
-                    ForeTint =100.0
-                    GroupTable =4
+                    GroupTable =1
                 End
             End
         End
         Begin Section
             CanGrow = NotDefault
-            Height =15030
+            Height =9270
             Name ="Detail"
+            AutoHeight =1
             AlternateBackColor =15921906
             AlternateBackThemeColorIndex =1
             AlternateBackShade =95.0
+            BackThemeColorIndex =1
             Begin
-                Begin TextBox
-                    OverlapFlags =85
-                    IMESentenceMode =3
-                    Left =2580
-                    Top =11220
-                    Width =1410
-                    Height =315
-                    BorderColor =10921638
-                    ForeColor =4210752
-                    Name ="ID_Staff"
-                    ControlSource ="ID_Staff"
-                    StatusBarText ="This table provides an entry for every member of staff containing uniquely ident"
-                        "ifiable details"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =2580
-                    LayoutCachedTop =11220
-                    LayoutCachedWidth =3990
-                    LayoutCachedHeight =11535
-                    Begin
-                        Begin Label
-                            OverlapFlags =85
-                            Left =420
-                            Top =11220
-                            Width =2040
-                            Height =315
-                            BorderColor =8355711
-                            ForeColor =8355711
-                            Name ="Label0"
-                            Caption ="Staff Record Number"
-                            GridlineColor =10921638
-                            LayoutCachedLeft =420
-                            LayoutCachedTop =11220
-                            LayoutCachedWidth =2460
-                            LayoutCachedHeight =11535
-                        End
-                    End
-                End
-                Begin TextBox
-                    OverlapFlags =93
-                    IMESentenceMode =3
-                    Left =1980
-                    Top =780
-                    Width =2880
-                    Height =315
+                Begin Subform
+                    OverlapFlags =215
+                    Left =540
+                    Top =1440
+                    Width =9450
+                    Height =7830
                     TabIndex =1
                     BorderColor =10921638
-                    ForeColor =4210752
-                    Name ="FirstName"
-                    ControlSource ="FirstName"
-                    StatusBarText ="Mandatory"
+                    Name ="frm2sub_AssMTr2Staff"
+                    SourceObject ="Form.frm2sub_AssMTr2Staff"
+                    LinkChildFields ="FK_StaffID"
+                    LinkMasterFields ="cboStaffSelect"
                     GridlineColor =10921638
 
-                    LayoutCachedLeft =1980
-                    LayoutCachedTop =780
-                    LayoutCachedWidth =4860
-                    LayoutCachedHeight =1095
+                    LayoutCachedLeft =540
+                    LayoutCachedTop =1440
+                    LayoutCachedWidth =9990
+                    LayoutCachedHeight =9270
                     Begin
                         Begin Label
                             OverlapFlags =93
-                            Left =360
-                            Top =780
-                            Width =1200
-                            Height =315
-                            BorderColor =8355711
-                            ForeColor =8355711
-                            Name ="Label1"
-                            Caption ="First name *"
-                            GridlineColor =10921638
-                            LayoutCachedLeft =360
-                            LayoutCachedTop =780
-                            LayoutCachedWidth =1560
-                            LayoutCachedHeight =1095
-                        End
-                    End
-                End
-                Begin TextBox
-                    OverlapFlags =93
-                    IMESentenceMode =3
-                    Left =1980
-                    Top =1200
-                    Width =2880
-                    Height =315
-                    TabIndex =2
-                    BorderColor =10921638
-                    ForeColor =4210752
-                    Name ="LastName"
-                    ControlSource ="LastName"
-                    StatusBarText ="Mandatory"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =1980
-                    LayoutCachedTop =1200
-                    LayoutCachedWidth =4860
-                    LayoutCachedHeight =1515
-                    Begin
-                        Begin Label
-                            OverlapFlags =93
-                            Left =360
+                            Left =540
                             Top =1200
-                            Width =1050
+                            Width =2520
                             Height =315
                             BorderColor =8355711
                             ForeColor =8355711
-                            Name ="Label2"
-                            Caption ="Surname *"
+                            Name ="frm2sub_AssMTr2S"
+                            Caption ="Assign Mandatory Training"
                             GridlineColor =10921638
-                            LayoutCachedLeft =360
+                            LayoutCachedLeft =540
                             LayoutCachedTop =1200
-                            LayoutCachedWidth =1410
+                            LayoutCachedWidth =3060
                             LayoutCachedHeight =1515
                         End
                     End
                 End
-                Begin TextBox
-                    OverlapFlags =93
-                    IMESentenceMode =3
-                    Left =1980
-                    Top =1620
-                    Width =2880
-                    Height =315
-                    TabIndex =3
-                    BorderColor =10921638
-                    ForeColor =4210752
-                    Name ="KNumber"
-                    ControlSource ="KNumber"
-                    StatusBarText ="Mandatory & Indexed & Unique: Each member of staff must have exactly one unique "
-                        "k-number; Error message needed if duplicate is detected; It is assumed all membe"
-                        "rs of staff recorded here (incl. GSTFT staff) will have a k-number"
-                    InputMask ="\"k-\"00000009;;_"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =1980
-                    LayoutCachedTop =1620
-                    LayoutCachedWidth =4860
-                    LayoutCachedHeight =1935
-                    Begin
-                        Begin Label
-                            OverlapFlags =93
-                            Left =360
-                            Top =1620
-                            Width =1140
-                            Height =315
-                            BorderColor =8355711
-                            ForeColor =8355711
-                            Name ="Label3"
-                            Caption ="k-number *"
-                            GridlineColor =10921638
-                            LayoutCachedLeft =360
-                            LayoutCachedTop =1620
-                            LayoutCachedWidth =1500
-                            LayoutCachedHeight =1935
-                        End
-                    End
-                End
-                Begin TextBox
-                    OverlapFlags =223
-                    IMESentenceMode =3
-                    Left =1980
-                    Top =2040
-                    Width =2880
-                    Height =315
-                    TabIndex =4
-                    BorderColor =10921638
-                    ForeColor =4210752
-                    Name ="Email"
-                    ControlSource ="Email"
-                    StatusBarText ="Mandatory"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =1980
-                    LayoutCachedTop =2040
-                    LayoutCachedWidth =4860
-                    LayoutCachedHeight =2355
-                    Begin
-                        Begin Label
-                            OverlapFlags =93
-                            Left =360
-                            Top =2040
-                            Width =2535
-                            Height =315
-                            BorderColor =8355711
-                            ForeColor =8355711
-                            Name ="Label4"
-                            Caption ="E-mail address *"
-                            GridlineColor =10921638
-                            LayoutCachedLeft =360
-                            LayoutCachedTop =2040
-                            LayoutCachedWidth =2895
-                            LayoutCachedHeight =2355
-                        End
-                    End
-                End
-                Begin TextBox
-                    OverlapFlags =223
-                    IMESentenceMode =3
-                    Left =1980
-                    Top =2460
-                    Width =2880
-                    Height =315
-                    TabIndex =5
-                    BorderColor =10921638
-                    ForeColor =4210752
-                    Name ="Telephone"
-                    ControlSource ="Telephone"
-                    StatusBarText ="Optional"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =1980
-                    LayoutCachedTop =2460
-                    LayoutCachedWidth =4860
-                    LayoutCachedHeight =2775
-                    Begin
-                        Begin Label
-                            OverlapFlags =93
-                            Left =360
-                            Top =2460
-                            Width =2055
-                            Height =315
-                            BorderColor =8355711
-                            ForeColor =8355711
-                            Name ="Label5"
-                            Caption ="Telephone"
-                            GridlineColor =10921638
-                            LayoutCachedLeft =360
-                            LayoutCachedTop =2460
-                            LayoutCachedWidth =2415
-                            LayoutCachedHeight =2775
-                        End
-                    End
-                End
-                Begin Rectangle
-                    OverlapFlags =93
-                    Left =10635
-                    Top =240
-                    Width =2205
-                    Height =2745
-                    BorderColor =10921638
-                    Name ="Box14"
-                    GridlineColor =10921638
-                    LayoutCachedLeft =10635
-                    LayoutCachedTop =240
-                    LayoutCachedWidth =12840
-                    LayoutCachedHeight =2985
-                End
-                Begin Label
-                    OverlapFlags =215
-                    Left =10785
-                    Top =1080
-                    Width =1740
-                    Height =1200
-                    BorderColor =8355711
-                    ForeColor =8355711
-                    Name ="Label15"
-                    Caption ="Placeholder - Staff Photo"
-                    GridlineColor =10921638
-                    LayoutCachedLeft =10785
-                    LayoutCachedTop =1080
-                    LayoutCachedWidth =12525
-                    LayoutCachedHeight =2280
-                End
-                Begin Line
+                Begin ComboBox
                     OverlapFlags =85
-                    Left =60
-                    Top =11040
-                    Width =11040
-                    Name ="Line21"
-                    GridlineColor =10921638
-                    LayoutCachedLeft =60
-                    LayoutCachedTop =11040
-                    LayoutCachedWidth =11100
-                    LayoutCachedHeight =11040
-                End
-                Begin Subform
-                    OverlapFlags =215
-                    Left =300
-                    Top =3600
-                    Width =6135
-                    Height =1620
-                    TabIndex =6
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =1500
+                    Top =420
+                    Width =8730
+                    Height =315
                     BorderColor =10921638
-                    Name ="frm2sub_Affiliations"
-                    SourceObject ="Form.frm2sub_SDAffiliations"
-                    LinkChildFields ="FK_StaffID"
-                    LinkMasterFields ="ID_Staff"
+                    ForeColor =4210752
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"0\""
+                    Name ="cboStaffSelect"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT tbl1_Staff.ID_Staff, tbl1_Staff.LastName & \", \" & tbl1_Staff.FirstName "
+                        "&\" (k-\" & tbl1_Staff.KNumber & \")\" AS StaffNameAndK FROM tbl1_Staff ORDER BY"
+                        " [LastName]; "
+                    ColumnWidths ="0"
                     GridlineColor =10921638
 
-                    LayoutCachedLeft =300
-                    LayoutCachedTop =3600
-                    LayoutCachedWidth =6435
-                    LayoutCachedHeight =5220
+                    LayoutCachedLeft =1500
+                    LayoutCachedTop =420
+                    LayoutCachedWidth =10230
+                    LayoutCachedHeight =735
+                    ForeThemeColorIndex =0
+                    ForeTint =75.0
+                    ForeShade =100.0
                     Begin
                         Begin Label
-                            OverlapFlags =93
-                            Left =300
-                            Top =3360
-                            Width =2085
+                            OverlapFlags =85
+                            Left =600
+                            Top =420
+                            Width =690
                             Height =315
                             BorderColor =8355711
                             ForeColor =8355711
-                            Name ="frm2sub_Affiliations Label"
-                            Caption ="Affiliations "
-                            EventProcPrefix ="frm2sub_Affiliations_Label"
+                            Name ="label5"
+                            Caption ="Staff"
                             GridlineColor =10921638
-                            LayoutCachedLeft =300
-                            LayoutCachedTop =3360
-                            LayoutCachedWidth =2385
-                            LayoutCachedHeight =3675
+                            LayoutCachedLeft =600
+                            LayoutCachedTop =420
+                            LayoutCachedWidth =1290
+                            LayoutCachedHeight =735
                         End
                     End
-                End
-                Begin Subform
-                    OverlapFlags =215
-                    Left =7080
-                    Top =3600
-                    Width =5760
-                    Height =1620
-                    TabIndex =7
-                    BorderColor =10921638
-                    Name ="frm2sub_SDPreEmployChx"
-                    SourceObject ="Form.frm2sub_SDPreEmployChx"
-                    LinkChildFields ="FK_StaffID"
-                    LinkMasterFields ="ID_Staff"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =7080
-                    LayoutCachedTop =3600
-                    LayoutCachedWidth =12840
-                    LayoutCachedHeight =5220
-                    Begin
-                        Begin Label
-                            OverlapFlags =93
-                            Left =7080
-                            Top =3360
-                            Width =2535
-                            Height =315
-                            BorderColor =8355711
-                            ForeColor =8355711
-                            Name ="frm2sub_SDPreEmployChx Label"
-                            Caption ="Pre-Employment Checks"
-                            EventProcPrefix ="frm2sub_SDPreEmployChx_Label"
-                            GridlineColor =10921638
-                            LayoutCachedLeft =7080
-                            LayoutCachedTop =3360
-                            LayoutCachedWidth =9615
-                            LayoutCachedHeight =3675
-                        End
-                    End
-                End
-                Begin Subform
-                    OverlapFlags =215
-                    Left =360
-                    Top =5640
-                    Width =12495
-                    Height =1275
-                    TabIndex =8
-                    BorderColor =10921638
-                    Name ="frm2sub_SDContractJD"
-                    SourceObject ="Form.frm2sub_SDContractJD"
-                    LinkChildFields ="FK_staffID"
-                    LinkMasterFields ="ID_Staff"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =360
-                    LayoutCachedTop =5640
-                    LayoutCachedWidth =12855
-                    LayoutCachedHeight =6915
-                    Begin
-                        Begin Label
-                            OverlapFlags =93
-                            Left =360
-                            Top =5400
-                            Width =2175
-                            Height =315
-                            BorderColor =8355711
-                            ForeColor =8355711
-                            Name ="frm2sub_SDContractJD Label"
-                            Caption ="Contract && Job Title"
-                            EventProcPrefix ="frm2sub_SDContractJD_Label"
-                            GridlineColor =10921638
-                            LayoutCachedLeft =360
-                            LayoutCachedTop =5400
-                            LayoutCachedWidth =2535
-                            LayoutCachedHeight =5715
-                        End
-                    End
-                End
-                Begin Subform
-                    OverlapFlags =215
-                    Left =5400
-                    Top =660
-                    Width =5100
-                    Height =2355
-                    TabIndex =9
-                    BorderColor =10921638
-                    Name ="frm2sub_SDAccount"
-                    SourceObject ="Form.frm2sub_SDAccount"
-                    LinkChildFields ="FK_StaffID"
-                    LinkMasterFields ="ID_Staff"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =5400
-                    LayoutCachedTop =660
-                    LayoutCachedWidth =10500
-                    LayoutCachedHeight =3015
-                    Begin
-                        Begin Label
-                            OverlapFlags =93
-                            Left =5220
-                            Top =360
-                            Width =1980
-                            Height =315
-                            BorderColor =8355711
-                            ForeColor =8355711
-                            Name ="frm2sub_SDAccount Label"
-                            Caption ="User Account Details"
-                            EventProcPrefix ="frm2sub_SDAccount_Label"
-                            GridlineColor =10921638
-                            LayoutCachedLeft =5220
-                            LayoutCachedTop =360
-                            LayoutCachedWidth =7200
-                            LayoutCachedHeight =675
-                        End
-                    End
-                End
-                Begin Label
-                    OverlapFlags =85
-                    TextAlign =1
-                    Left =360
-                    Top =360
-                    Width =1200
-                    Height =285
-                    BorderColor =8355711
-                    ForeColor =8355711
-                    Name ="Label61"
-                    Caption ="Staff Details"
-                    GroupTable =5
-                    GridlineColor =10921638
-                    LayoutCachedLeft =360
-                    LayoutCachedTop =360
-                    LayoutCachedWidth =1560
-                    LayoutCachedHeight =645
-                    LayoutGroup =2
-                    GroupTable =5
-                End
-                Begin Rectangle
-                    OverlapFlags =247
-                    Left =240
-                    Top =705
-                    Width =5115
-                    Height =2310
-                    BorderColor =10921638
-                    Name ="Box63"
-                    GridlineColor =10921638
-                    LayoutCachedLeft =240
-                    LayoutCachedTop =705
-                    LayoutCachedWidth =5355
-                    LayoutCachedHeight =3015
                 End
             End
         End
         Begin FormFooter
-            Visible = NotDefault
-            Height =1692
+            Height =1200
             Name ="FormFooter"
             AlternateBackThemeColorIndex =1
             AlternateBackShade =95.0
+            BackThemeColorIndex =1
             Begin
                 Begin CommandButton
                     OverlapFlags =85
-                    Left =1440
-                    Top =120
-                    Width =2886
-                    Height =726
-                    FontSize =14
+                    Left =7320
+                    Top =180
+                    Width =840
+                    Height =840
                     ForeColor =4210752
-                    Name ="btn_StaffDetails_Undo"
-                    Caption ="Abort"
-                    OnClick ="[Event Procedure]"
-                    ControlTipText ="Undo Record"
+                    Name ="CloseForm"
+                    Caption ="Close"
+                    ControlTipText ="Close Form"
                     GridlineColor =10921638
+                    OnClickEmMacro = Begin
+                        Version =196611
+                        ColumnsShown =8
+                        Begin
+                            Action ="Close"
+                            Argument ="-1"
+                            Argument =""
+                            Argument ="0"
+                        End
+                        Begin
+                            Comment ="_AXL:<?xml version=\"1.0\" encoding=\"UTF-16\" standalone=\"no\"?>\015\012<UserI"
+                                "nterfaceMacro For=\"CloseForm\" xmlns=\"http://schemas.microsoft.com/office/acce"
+                                "ssservices/2009/11/application\"><Statements><Action Name=\"CloseWindow\"/></Sta"
+                                "tements></UserInterfaceMacro>"
+                        End
+                    End
+                    ImageData = Begin
+                        0x2800000010000000100000000100200000000000000000000000000000000000 ,
+                        0x000000000000000000000000000000000000000082c2ea0982c2ea4b82c2ea90 ,
+                        0x82c2eade00000000000000000000000000000000000000000000000000000000 ,
+                        0x000000000000000082c2ea2182c2ea7582c2eab782c2eaf982c2eaff82c2eaff ,
+                        0x82c2eaff00000000000000000000000000000000000000000000000000000000 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff000000000000000000000000 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaffffffffffffffffffffffffff82c2eaff000000000000000000000000 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaffffffffffffffffffffffffa500000000000000000000000000000000 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaffffffffffffffffc000000000b17d4a90b17d4affb17d4af0b17d4a36 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaffffffffedffffff30b17d4a87b17d4affb17d4af0b17d4a3600000000 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaffffffffffd7ecf8ff82c2eaff ,
+                        0x82c2eaffffffff30b17d4a81b17d4affb17d4affb17d4affb17d4affb17d4aff ,
+                        0xb17d4affb17d4aff82c2eaff82c2eaff82c2eaffdceef9ffc4e2f5ff82c2eaff ,
+                        0x82c2eaffffffff27b17d4a7eb17d4affb17d4affb17d4affb17d4affb17d4aff ,
+                        0xb17d4affb17d4aff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaffffffffe4ffffff27b17d4a84b17d4affb17d4af0b17d4a3900000000 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaffffffffffffffffbd00000000b17d4a8db17d4affb17d4af0b17d4a39 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaffffffffffffffffffffffffa500000000000000000000000000000000 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaffffffffffffffffffffffffff82c2eaff000000000000000000000000 ,
+                        0x000000000000000082c2eaff82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff ,
+                        0x82c2eaff82c2eaff82c2eaff82c2eaff82c2eaff000000000000000000000000 ,
+                        0x000000000000000082c2ea2182c2ea6f82c2eab782c2eaf982c2eaff82c2eaff ,
+                        0x82c2eaff00000000000000000000000000000000000000000000000000000000 ,
+                        0x000000000000000000000000000000000000000082c2ea0982c2ea4e82c2ea96 ,
+                        0x82c2eae400000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
 
-                    LayoutCachedLeft =1440
-                    LayoutCachedTop =120
-                    LayoutCachedWidth =4326
-                    LayoutCachedHeight =846
+                    LayoutCachedLeft =7320
+                    LayoutCachedTop =180
+                    LayoutCachedWidth =8160
+                    LayoutCachedHeight =1020
                     BackColor =15123357
                     BorderColor =15123357
                     HoverColor =15652797
@@ -1545,38 +1209,6 @@ Begin Form
                     WebImagePaddingTop =2
                     WebImagePaddingRight =1
                     WebImagePaddingBottom =1
-                    Overlaps =1
-                End
-                Begin CommandButton
-                    OverlapFlags =85
-                    Left =7200
-                    Top =120
-                    Width =2886
-                    Height =726
-                    FontSize =14
-                    TabIndex =1
-                    ForeColor =4210752
-                    Name ="btn_StaffDetails_Proceed"
-                    Caption ="Proceed"
-                    OnClick ="[Event Procedure]"
-                    ControlTipText ="Undo Record"
-                    GridlineColor =10921638
-
-                    LayoutCachedLeft =7200
-                    LayoutCachedTop =120
-                    LayoutCachedWidth =10086
-                    LayoutCachedHeight =846
-                    BackColor =15123357
-                    BorderColor =15123357
-                    HoverColor =15652797
-                    PressedColor =11957550
-                    HoverForeColor =4210752
-                    PressedForeColor =4210752
-                    WebImagePaddingLeft =2
-                    WebImagePaddingTop =2
-                    WebImagePaddingRight =1
-                    WebImagePaddingBottom =1
-                    Overlaps =1
                 End
             End
         End
@@ -1590,60 +1222,11 @@ Attribute VB_Exposed = False
 Option Compare Database
 Option Explicit
 
-Private Sub Form_Dirty(Cancel As Integer)
-    ' On making a change in a record, change background colour to red and display footer with 'Cancel' & 'proceed' Buttons
-    Me.FormFooter.Visible = True
-    Me.FormFooter.BackColor = RGB(255, 204, 204)
-    Me.Detail.BackColor = RGB(255, 204, 204)
-End Sub
+' Public globalV_currStaffID As Variant
 
-Private Sub btn_StaffDetails_Undo_Click()
-    'On clicking Undo button hide the footer with controls and change background colour back to white
-    Me.FormFooter.BackColor = RGB(255, 255, 255)
-    Me.Detail.BackColor = RGB(255, 255, 255)
-    Me.FormFooter.Visible = False
-    'Finally, exit edit mode
-    Me.Undo
-End Sub
+Private Sub Form_Load()
 
-Private Sub btn_StaffDetails_Proceed_Click()
-    'On clicking Proceed button
-    
-    '1. Formatting: hide the footer with controls and change background colour back to white
-        Me.FormFooter.BackColor = RGB(255, 255, 255)
-        Me.Detail.BackColor = RGB(255, 255, 255)
-        Me.FormFooter.Visible = False
-        
-    '2. Execute: Run the (append) query qry_StaffMCourse (appends a list of all available training courses for the current staff member to tbl3Jnkt_StaffMCourses
-        ' Source:   http://www.fmsinc.com/microsoftaccess/query/action-queries/SuppressWarningMessages.htm -
-        ' Note:     docmd.execute would achive the same w/o requiring setwarnings to be switched on and off
-        DoCmd.SetWarnings False
-        DoCmd.OpenQuery "qry_StaffMCourse"
-        DoCmd.SetWarnings True
-        'DoCmd.Execute "qry_StaffMCourse"
-    
-    '3. Save the current StaffID variable as a a global temp variable...
-    '       ... (this will be used in the onLoad event of frm1_AsignMCourses2Staff to initialize it to display the training record of the current staff member
-        glbV_CurrStaffID = [Forms]![frm1_StaffDetails]![ID_Staff]
+    Me.cboStaffSelect.Value = glbV_CurrStaffID
+    glbV_CurrStaffID = Null
 
-    '4. Launch the form frm1_AssignMCourses2Staff
-        DoCmd.OpenForm "frm1_AssignMCourses2Staff", acAdd, , , acFormEdit, acDialog
-    '    DoCmd.OpenForm "frm1_AssignMCourses2Staff", acNormal, , , acFormEdit, acDialog
-    '    DoCmd.OpenForm "frm1_AssignMCourses2Staff", acNormal, , [cboStaffSelect]![IDStaff] = [Forms]![frm1StaffDetails]![ID_Staff], acFormEdit, acDialog
-        
-     '   DoCmd.s
-    
-    
-    
-    
-    
-    
-'    CurrentDb.Execute "qryStaffCourse"
-'
-'    'open form for current staff member
-'    DoCmd.OpenForm "frm2StaffCourse", acNormal, , [ID_Staff] = [Forms]![frm1_StaffDetails]![ID_Staff]
-'
-    'Finally, accept changes and exit edit mode
-    Me.Refresh
-    
 End Sub
