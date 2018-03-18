@@ -1,0 +1,209 @@
+Type,Name,Source/Link,Element Name,Description,Data Type,Data Format,Validation,Associated functionalities,Notes,
+table,tbl_staff,N/A,ID_Staff,Primary key,autonumber,,,,,
+,,N/A,FK_Affilliation,Forgein Key to tbl_affilliation_LUT,number,,,,,
+,,tbl_UserAccount,FK_UsrAcc,Forgein Key to tbl_UserAccount,number,,,,,
+,,tbl_contractDetails_LUT,ID_ContractType,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,N/A,FirstName,First Name,text,,,,,
+,,N/A,LastName,Surname,text,,,,,
+,,N/A,kNo,k-number,text,,,,,
+,,N/A,ActivityStatus,Active status,Boolean,yes/no,,,"Inactive staff (e.g. Sabbatical, leavers, mat leave). 
+
+This is added to the start up script: check if current date is > contract end date and if yes output a warning message, email the appropriate department manager (and set active status in tbl_staff to false)","prior to being active, the manager must confirm (s)he has checked tbl_DBSclearance, tbl_Ohclearance, tbl_StaffDocs etc.;
+there should be a report listing all staff members currently waiting to be activated"
+,,,,,,,,,,
+table,tbl_UserAccount,N/A,ID_UsrAcc,Primary key,autonumber,,,,,How does a user change his/her password? You need to ask them to double enter and compare them before setting it.
+,,N/A,Username,Login user name,text,,,,,
+,,N/A,Password,Login password,text,,,,,
+,,N/A,AccessLevel,Lookup,Text,,"SuperUser-1
+Manager-2
+Staff-3",,,
+,,N/A,Email,Preferred email address,hyperlink,xxx@xxx.xxx,,,,
+,,N/A,visibilityfilter_DeptProj - omitted--> will be defined by affiliation,Name of departments or projects a manager (or superuser) should be able to view,Lookup,,ID_Affilliation,,,
+,,,,,,,,,,
+table,tbl_contractDetails_LUT,N/A,ID_ContractType,Primary key,autonumber,,,,,
+,,N/A,Contract,Contract type,lookup,,"Substantive (KCL)
+Honorary (KCL)
+Visitor (KCL)
+Student (KCL)
+Substantive (GSTFT)
+Honorary Medical (GSTFT)
+Honorary Medical Observer (GSTFT)
+Honorary Non-Medical Observer (GSTFT)",,,
+,,N/A,DateStart,Contract start date,Date/Time,,,,,
+,,N/A,DateEnd,Contract end date,Date/Time,,,,Note- the start up script should check if this is > today's date and if it is consider active status,
+,,N/A,Organization,Orgnization issuing the contract,lookup,,"KCL
+GSTFT",,,
+,,,,,,,,,,
+table,tbl_affilliation_LUT,N/A,ID_Affilliation,"Primary key
+Unique abbreviated ID with no spaces- so it can be used as the primary key ",text,,"NA-0
+BME-1
+CaI-2
+CVI-3
+PET-4
+PIH-5
+TOHETI-6
+iFIND-7
+dHCP-8
+SmartHeart-9
+
+
+",,"Elaboration to option: NA (option 0)
+Although it is unlikely that we will ever have a member of staff not part of any project or department, the primary motivation was for its use as a filter text (see visibilityFilter_DeptProj in tbl_UserAccount) - individual members of staff should only be able to see themselves and therefore need their filter value to be set to a default.",
+,,N/A,Full Name,Full name ,text,,"Biomedical Engineering (BME)
+Cancer Imaging (CaI)
+Cardiovascular Imaging (CVI)
+PET Centre (PET)
+Perinatal Imaging & Health (PIH)
+Transforming Outcomes & Health Economics Through Imaging (TOHETI)
+Intelligent Fetal Imaging and Diagnosis (iFIND)
+Developing Human Connectome Project (dHCP)
+SmartHeart
+
+
+",,,
+,,N/A - omitted,Group Type,Filter text,,,"None-0
+Department-1
+Project -2",,,
+,,"tbl_UserAccount- 
+this was actually reformatted as a many to many relationship (i.e. one person can belong to many departments and one department can have many persons
+Gropup type was omitted. If included reformat it as a lookup table",Manager_ID_Staff,Each department/project will have an associated manager's user account,,,,,work this out,
+,,,,,,,,,,
+,tbl_DBSclearance,N/A,ID_DBSClearance,,,,,,Check if DBS check is necessary and available prior to registering user as being 'active',NOTE: have a clearance output screen and potentially report that spoecifies for each member of staff if they have clearance to be active
+,,,DBS_clearanceLevel,,lookup,,"standard
+enhanced",,,
+,,,DBS_DateClearance,,Date,,,,Start up script: check clearance date to assess if staff may be considered active,
+,,,DBS_DateExpiry,,Date,,,,Add to start up script,
+,,,,,,,,,,
+,tbl_OHclearance,,ID_OHClearance,,,,,,Check if DBS check is necessary and available prior to registering user as being 'active',
+,,,OH_clearanceLevel,,,,,,,
+,,,OH_clearanceDate,,,,,,Start up script: check clearance date to assess if staff may be considered active,
+,,,OH_clearanceExpiryDate,,,,,,Add to start up script,
+,,,,,,,,,,
+,tbl_StaffDocs,,ID_StaffDocs,,,,,,,
+,,,FK_StaffID,,,,,,,
+,,,newStarterChecklist,,attachment,,,,,
+,,,dataProtectionSOP,,attachment,,,,,
+,,,CV,,attachment,,,,,
+,,,VerifiedBy,,text,,,,this notes down the user name of the manager setting up the account,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,tbl_professionalRegistration,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,tbl_OptCourses_CPD_PDR,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,tbl_MandatoryTrainingLUT,,,,,,,,,Course details
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,tbl_MandatoryCoursesAttn,,,,,,,,,staff attendence date
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+Query,qry_MandatoryCompliance,,,,,,,,,DATED compliance levels
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,tbl_RolesAndDuties,,,,,,,,,
+       ,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,tbl_JobDescription,,,,,,,,,what if someone is emplyed under different JD's by Different organizations and doffernt types of contracts- all need to be combined into the same mandatory training course list- which therefore must be additive
+       ,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,tbl_activity log,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,tbl_attendedTraining,,,,,,,,,
+,Compliance over time!!!!,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
