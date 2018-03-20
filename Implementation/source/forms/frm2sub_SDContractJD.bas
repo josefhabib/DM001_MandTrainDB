@@ -19,9 +19,9 @@ Begin Form
     Bottom =7695
     DatasheetGridlinesColor =15132391
     RecSrcDt = Begin
-        0x0e1d28951e11e540
+        0xae027b174d15e540
     End
-    RecordSource ="tbl2_StaffContractJD"
+    RecordSource ="tbl2_Staff_ContractJD"
     DatasheetFontName ="Calibri"
     FilterOnLoad =0
     ShowPageMargins =0

@@ -13,8 +13,6 @@
 <xsd:appinfo>
 <od:index index-name="FK_StaffID" index-key="FK_StaffID FK_MCourseID DateMTrCompleted " primary="no" unique="yes" clustered="no" order="asc asc asc"/>
 <od:index index-name="PrimaryKey" index-key="ID_TrainingLog " primary="yes" unique="yes" clustered="no" order="asc"/>
-<od:index index-name="tbl1_MCourseCatalogtbl3_Staff_TrainingLog" index-key="FK_MCourseID " primary="no" unique="no" clustered="no" order="asc"/>
-<od:index index-name="tbl1_Stafftbl3_Staff_TrainingLog" index-key="FK_StaffID " primary="no" unique="no" clustered="no" order="asc"/>
 </xsd:appinfo>
 </xsd:annotation>
 <xsd:complexType>

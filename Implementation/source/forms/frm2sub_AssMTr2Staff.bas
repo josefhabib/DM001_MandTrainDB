@@ -18,12 +18,16 @@ Begin Form
     Right =10065
     Bottom =10425
     DatasheetGridlinesColor =15132391
-    Filter ="([tbl3Jnkt_StaffMCourses].[FK_StaffID]=12)"
+    Filter ="([tbl3curr_Staff_MCourseAlloc].FK_StaffID=12)"
     RecSrcDt = Begin
-        0x168652dff514e540
+        0xf680c84c5115e540
     End
-    RecordSource ="tbl3Jnkt_StaffMCourses"
+    RecordSource ="tbl3curr_Staff_MCourseAlloc"
     DatasheetFontName ="Calibri"
+    PrtMip = Begin
+        0x6801000068010000680100006801000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
     FilterOnLoad =0
     ShowPageMargins =0
     DisplayOnSharePointSite =1
@@ -113,7 +117,7 @@ Begin Form
                     BorderColor =10921638
                     ForeColor =4210752
                     Name ="ID"
-                    ControlSource ="ID"
+                    ControlSource ="ID_StaffMCourse_curr"
                     GridlineColor =10921638
 
                     LayoutCachedLeft =2100
@@ -130,7 +134,7 @@ Begin Form
                             BorderColor =8355711
                             ForeColor =8355711
                             Name ="Label0"
-                            Caption ="ID"
+                            Caption ="ID_StaffMCourse_curr"
                             GridlineColor =10921638
                             LayoutCachedLeft =300
                             LayoutCachedTop =600
@@ -145,7 +149,7 @@ Begin Form
                     Left =2100
                     Top =1020
                     Height =315
-                    ColumnWidth =3825
+                    ColumnWidth =15
                     TabIndex =1
                     BorderColor =10921638
                     ForeColor =4210752
@@ -184,7 +188,7 @@ Begin Form
                     Left =2100
                     Top =1440
                     Height =315
-                    ColumnWidth =5790
+                    ColumnWidth =6615
                     TabIndex =2
                     BorderColor =10921638
                     ForeColor =3484194
@@ -225,10 +229,12 @@ Begin Form
                     OverlapFlags =85
                     Left =2100
                     Top =1860
+                    ColumnWidth =2190
                     TabIndex =3
                     BorderColor =10921638
                     Name ="Allocate"
                     ControlSource ="Allocate"
+                    BeforeUpdate ="[Event Procedure]"
                     GridlineColor =10921638
 
                     LayoutCachedLeft =2100
@@ -258,3 +264,26 @@ Begin Form
         End
     End
 End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+
+Private Sub Allocate_BeforeUpdate(Cancel As Integer)
+
+'1. Declare a string variable to hold the SQL command
+Dim strSQL As String
+
+'2. Build the SQL command
+strSQL = "INSERT INTO tbl3Log_Staff_MCoursesAlloc (FK_curr_StaffMCourseAlloc, FK_StaffID, FK_MCourseID, Allocated) VALUES (" & Me.ID_StaffMCourse_curr.Value & " ," & Me.FK_StaffID.Value & " ," & Me.FK_MCourseID.Value & " ," & Me.Allocate.Value & ")"
+
+'3 View/Run SQL command
+'MsgBox strSQL
+DoCmd.SetWarnings False
+DoCmd.RunSQL strSQL
+DoCmd.SetWarnings True
+
+End Sub

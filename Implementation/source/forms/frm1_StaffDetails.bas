@@ -13,8 +13,8 @@ Begin Form
     Width =18105
     DatasheetFontHeight =11
     ItemSuffix =80
-    Right =25485
-    Bottom =12345
+    Right =18555
+    Bottom =12375
     DatasheetGridlinesColor =15132391
     RecSrcDt = Begin
         0x4efbac351611e540
@@ -1628,22 +1628,7 @@ Private Sub btn_StaffDetails_Proceed_Click()
 
     '4. Launch the form frm1_AssignMCourses2Staff
         DoCmd.OpenForm "frm1_AssignMCourses2Staff", acAdd, , , acFormEdit, acDialog
-    '    DoCmd.OpenForm "frm1_AssignMCourses2Staff", acNormal, , , acFormEdit, acDialog
-    '    DoCmd.OpenForm "frm1_AssignMCourses2Staff", acNormal, , [cboStaffSelect]![IDStaff] = [Forms]![frm1StaffDetails]![ID_Staff], acFormEdit, acDialog
-        
-     '   DoCmd.s
     
-    
-    
-    
-    
-    
-'    CurrentDb.Execute "qryStaffCourse"
-'
-'    'open form for current staff member
-'    DoCmd.OpenForm "frm2StaffCourse", acNormal, , [ID_Staff] = [Forms]![frm1_StaffDetails]![ID_Staff]
-'
-    'Finally, accept changes and exit edit mode
     Me.Refresh
     
 End Sub

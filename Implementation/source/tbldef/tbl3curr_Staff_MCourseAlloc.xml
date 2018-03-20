@@ -3,15 +3,15 @@
 <xsd:element name="dataroot">
 <xsd:complexType>
 <xsd:sequence>
-<xsd:element ref="tbl3Jnkt_StaffMCourses" minOccurs="0" maxOccurs="unbounded"/>
+<xsd:element ref="tbl3curr_Staff_MCourseAlloc" minOccurs="0" maxOccurs="unbounded"/>
 </xsd:sequence>
 <xsd:attribute name="generated" type="xsd:dateTime"/>
 </xsd:complexType>
 </xsd:element>
-<xsd:element name="tbl3Jnkt_StaffMCourses">
+<xsd:element name="tbl3curr_Staff_MCourseAlloc">
 <xsd:annotation>
 <xsd:appinfo>
-<od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
+<od:index index-name="PrimaryKey" index-key="ID_StaffMCourse_curr " primary="yes" unique="yes" clustered="no" order="asc"/>
 <od:index index-name="StaffCourse" index-key="FK_StaffID FK_MCourseID " primary="no" unique="yes" clustered="no" order="asc asc"/>
 <od:index index-name="tbl1_MCourseCatalogtbl3Jnkt_StaffMCourses" index-key="FK_MCourseID " primary="no" unique="no" clustered="no" order="asc"/>
 <od:index index-name="tbl1_Stafftbl3Jnkt_StaffMCourses" index-key="FK_StaffID " primary="no" unique="no" clustered="no" order="asc"/>
@@ -19,7 +19,7 @@
 </xsd:annotation>
 <xsd:complexType>
 <xsd:sequence>
-<xsd:element name="ID" minOccurs="1" od:jetType="autonumber" od:sqlSType="int" od:autoUnique="yes" od:nonNullable="yes" type="xsd:int"/>
+<xsd:element name="ID_StaffMCourse_curr" minOccurs="1" od:jetType="autonumber" od:sqlSType="int" od:autoUnique="yes" od:nonNullable="yes" type="xsd:int"/>
 <xsd:element name="FK_StaffID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="FK_MCourseID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="Allocate" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean"/>

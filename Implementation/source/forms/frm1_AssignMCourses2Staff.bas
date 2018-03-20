@@ -13,8 +13,8 @@ Begin Form
     Width =10230
     DatasheetFontHeight =11
     ItemSuffix =9
-    Right =10485
-    Bottom =10995
+    Right =23445
+    Bottom =14430
     DatasheetGridlinesColor =15132391
     RecSrcDt = Begin
         0xecdc3e3ff914e540
@@ -1140,24 +1140,9 @@ Begin Form
                     ForeColor =4210752
                     Name ="CloseForm"
                     Caption ="Close"
+                    OnClick ="[Event Procedure]"
                     ControlTipText ="Close Form"
                     GridlineColor =10921638
-                    OnClickEmMacro = Begin
-                        Version =196611
-                        ColumnsShown =8
-                        Begin
-                            Action ="Close"
-                            Argument ="-1"
-                            Argument =""
-                            Argument ="0"
-                        End
-                        Begin
-                            Comment ="_AXL:<?xml version=\"1.0\" encoding=\"UTF-16\" standalone=\"no\"?>\015\012<UserI"
-                                "nterfaceMacro For=\"CloseForm\" xmlns=\"http://schemas.microsoft.com/office/acce"
-                                "ssservices/2009/11/application\"><Statements><Action Name=\"CloseWindow\"/></Sta"
-                                "tements></UserInterfaceMacro>"
-                        End
-                    End
                     ImageData = Begin
                         0x2800000010000000100000000100200000000000000000000000000000000000 ,
                         0x000000000000000000000000000000000000000082c2ea0982c2ea4b82c2ea90 ,
@@ -1222,6 +1207,8 @@ Attribute VB_Exposed = False
 Option Compare Database
 Option Explicit
 
+
+
 ' Public globalV_currStaffID As Variant
 
 Private Sub Form_Load()
@@ -1229,4 +1216,17 @@ Private Sub Form_Load()
     Me.cboStaffSelect.Value = glbV_CurrStaffID
     glbV_CurrStaffID = Null
 
+End Sub
+
+
+Private Sub CloseForm_Click()
+    ' Run the append query to initilizy tbl3Log_Staff_MCourseAlloc with your seelcted courses
+    ' (the staff ID + Course ID  provide a composite unique index in the table to prevent overwriting)
+        DoCmd.SetWarnings False
+        DoCmd.OpenQuery "qry_StaffMCourse_initLogFile"
+        DoCmd.SetWarnings True
+
+    ' Once done close the window
+        DoCmd.Close
+        
 End Sub
