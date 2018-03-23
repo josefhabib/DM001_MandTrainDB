@@ -23,6 +23,7 @@
 <xsd:element name="FK_StaffID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="FK_MCourseID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="Allocate" minOccurs="1" od:jetType="yesno" od:sqlSType="bit" od:nonNullable="yes" type="xsd:boolean"/>
+<xsd:element name="DueDate" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime"/>
 </xsd:sequence>
 </xsd:complexType>
 </xsd:element>

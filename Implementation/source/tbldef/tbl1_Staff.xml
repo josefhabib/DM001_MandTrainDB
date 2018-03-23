@@ -13,14 +13,13 @@
 <xsd:appinfo>
 <od:index index-name="Email" index-key="Email " primary="no" unique="yes" clustered="no" order="asc"/>
 <od:index index-name="FirstName" index-key="FirstName " primary="no" unique="yes" clustered="no" order="asc"/>
-<od:index index-name="KNumber" index-key="KNumber " primary="no" unique="yes" clustered="no" order="asc"/>
 <od:index index-name="PrimaryKey" index-key="ID_Staff " primary="yes" unique="yes" clustered="no" order="asc"/>
 </xsd:appinfo>
 </xsd:annotation>
 <xsd:complexType>
 <xsd:sequence>
 <xsd:element name="ID_Staff" minOccurs="1" od:jetType="autonumber" od:sqlSType="int" od:autoUnique="yes" od:nonNullable="yes" type="xsd:int"/>
-<xsd:element name="FirstName" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+<xsd:element name="FirstName" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
 <xsd:simpleType>
 <xsd:restriction base="xsd:string">
 <xsd:maxLength value="50"/>
@@ -34,14 +33,14 @@
 </xsd:restriction>
 </xsd:simpleType>
 </xsd:element>
-<xsd:element name="KNumber" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+<xsd:element name="KNumber" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
 <xsd:simpleType>
 <xsd:restriction base="xsd:string">
 <xsd:maxLength value="10"/>
 </xsd:restriction>
 </xsd:simpleType>
 </xsd:element>
-<xsd:element name="Email" minOccurs="1" od:jetType="text" od:sqlSType="nvarchar" od:nonNullable="yes">
+<xsd:element name="Email" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
 <xsd:simpleType>
 <xsd:restriction base="xsd:string">
 <xsd:maxLength value="100"/>

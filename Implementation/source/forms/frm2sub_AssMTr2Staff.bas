@@ -12,11 +12,11 @@ Begin Form
     GridY =24
     Width =8884
     DatasheetFontHeight =11
-    ItemSuffix =4
-    Left =885
-    Top =2865
-    Right =10065
-    Bottom =10425
+    ItemSuffix =7
+    Left =540
+    Top =1980
+    Right =11085
+    Bottom =9795
     DatasheetGridlinesColor =15132391
     Filter ="([tbl3curr_Staff_MCourseAlloc].FK_StaffID=12)"
     RecSrcDt = Begin
@@ -228,8 +228,8 @@ Begin Form
                 Begin CheckBox
                     OverlapFlags =85
                     Left =2100
-                    Top =1860
-                    ColumnWidth =2190
+                    Top =2310
+                    ColumnWidth =1500
                     TabIndex =3
                     BorderColor =10921638
                     Name ="Allocate"
@@ -238,14 +238,14 @@ Begin Form
                     GridlineColor =10921638
 
                     LayoutCachedLeft =2100
-                    LayoutCachedTop =1860
+                    LayoutCachedTop =2310
                     LayoutCachedWidth =2360
-                    LayoutCachedHeight =2100
+                    LayoutCachedHeight =2550
                     Begin
                         Begin Label
                             OverlapFlags =247
                             Left =2330
-                            Top =1830
+                            Top =2280
                             Width =840
                             Height =315
                             BorderColor =8355711
@@ -254,9 +254,47 @@ Begin Form
                             Caption ="Allocate"
                             GridlineColor =10921638
                             LayoutCachedLeft =2330
-                            LayoutCachedTop =1830
+                            LayoutCachedTop =2280
                             LayoutCachedWidth =3170
-                            LayoutCachedHeight =2145
+                            LayoutCachedHeight =2595
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =2100
+                    Top =1860
+                    Height =315
+                    ColumnWidth =1995
+                    TabIndex =4
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="DueDate"
+                    ControlSource ="DueDate"
+                    Format ="Medium Date"
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =2100
+                    LayoutCachedTop =1860
+                    LayoutCachedWidth =3540
+                    LayoutCachedHeight =2175
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =300
+                            Top =1860
+                            Width =885
+                            Height =315
+                            BorderColor =8355711
+                            ForeColor =8355711
+                            Name ="Label6"
+                            Caption ="DueDate"
+                            GridlineColor =10921638
+                            LayoutCachedLeft =300
+                            LayoutCachedTop =1860
+                            LayoutCachedWidth =1185
+                            LayoutCachedHeight =2175
                         End
                     End
                 End

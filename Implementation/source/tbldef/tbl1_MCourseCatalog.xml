@@ -67,6 +67,7 @@
 </xsd:simpleType>
 </xsd:element>
 <xsd:element name="Validity_months" minOccurs="1" od:jetType="longinteger" od:sqlSType="int" od:nonNullable="yes" type="xsd:int"/>
+<xsd:element name="InitGrace_d" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="LastUpdated" minOccurs="0" od:jetType="datetime" od:sqlSType="datetime" type="xsd:dateTime"/>
 <xsd:element name="EvidencedBy" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
 <xsd:simpleType>

@@ -2,7 +2,6 @@
 VersionRequired =20
 Begin Form
     DividingLines = NotDefault
-    OrderByOn = NotDefault
     AllowDesignChanges = NotDefault
     DefaultView =2
     PictureAlignment =2
@@ -16,9 +15,9 @@ Begin Form
     Bottom =9345
     DatasheetGridlinesColor =15132391
     RecSrcDt = Begin
-        0xeb382f9cd514e540
+        0xf568f9ab9b15e540
     End
-    RecordSource ="tbl3Jnkt_StaffMCourses"
+    RecordSource ="tbl3curr_Staff_MCourseAlloc"
     DatasheetFontName ="Calibri"
     FilterOnLoad =0
     ShowPageMargins =0
@@ -109,7 +108,7 @@ Begin Form
                     BorderColor =10921638
                     ForeColor =4210752
                     Name ="ID"
-                    ControlSource ="ID"
+                    ControlSource ="ID_StaffMCourse_curr"
                     GridlineColor =10921638
 
                     LayoutCachedLeft =2640
@@ -126,7 +125,7 @@ Begin Form
                             BorderColor =8355711
                             ForeColor =8355711
                             Name ="Label0"
-                            Caption ="ID"
+                            Caption ="ID_StaffMCourse_curr"
                             GridlineColor =10921638
                             LayoutCachedLeft =1320
                             LayoutCachedTop =660

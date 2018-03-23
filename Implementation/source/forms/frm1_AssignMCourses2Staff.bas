@@ -10,11 +10,11 @@ Begin Form
     DatasheetGridlinesBehavior =3
     GridX =24
     GridY =24
-    Width =10230
+    Width =11355
     DatasheetFontHeight =11
     ItemSuffix =9
     Right =23445
-    Bottom =14430
+    Bottom =12375
     DatasheetGridlinesColor =15132391
     RecSrcDt = Begin
         0xecdc3e3ff914e540
@@ -155,7 +155,7 @@ Begin Form
                     TextAlign =1
                     Left =1050
                     Top =60
-                    Width =6645
+                    Width =7770
                     Height =460
                     FontSize =18
                     BorderColor =6968388
@@ -168,7 +168,7 @@ Begin Form
                     HorizontalAnchor =2
                     LayoutCachedLeft =1050
                     LayoutCachedTop =60
-                    LayoutCachedWidth =7695
+                    LayoutCachedWidth =8820
                     LayoutCachedHeight =520
                     ColumnStart =1
                     ColumnEnd =1
@@ -1044,7 +1044,7 @@ Begin Form
                     OverlapFlags =215
                     Left =540
                     Top =1440
-                    Width =9450
+                    Width =10815
                     Height =7830
                     TabIndex =1
                     BorderColor =10921638
@@ -1056,7 +1056,7 @@ Begin Form
 
                     LayoutCachedLeft =540
                     LayoutCachedTop =1440
-                    LayoutCachedWidth =9990
+                    LayoutCachedWidth =11355
                     LayoutCachedHeight =9270
                     Begin
                         Begin Label
@@ -1133,8 +1133,7 @@ Begin Form
             Begin
                 Begin CommandButton
                     OverlapFlags =85
-                    Left =7320
-                    Top =180
+                    Left =10500
                     Width =840
                     Height =840
                     ForeColor =4210752
@@ -1180,10 +1179,9 @@ Begin Form
                         0x0000000000000000
                     End
 
-                    LayoutCachedLeft =7320
-                    LayoutCachedTop =180
-                    LayoutCachedWidth =8160
-                    LayoutCachedHeight =1020
+                    LayoutCachedLeft =10500
+                    LayoutCachedWidth =11340
+                    LayoutCachedHeight =840
                     BackColor =15123357
                     BorderColor =15123357
                     HoverColor =15652797

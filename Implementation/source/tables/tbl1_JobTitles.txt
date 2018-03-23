@@ -15,3 +15,9 @@
 14	Radiographer	Clinical
 15	Nurse	Clinical
 16	Midwife	Clinical
+17	Superintendent Radiographer	Clinical
+18	Administration	Non-Clinical
+19	IT	Non-Clinical
+20	Research Coordinator	Non-Clinical
+21	Other (Clinical)	Clinical
+22	Other (Non-Clinical)	Non-Clinical

@@ -15,9 +15,9 @@ Begin Form
     Bottom =13185
     DatasheetGridlinesColor =15132391
     RecSrcDt = Begin
-        0xc04d0ae41e11e540
+        0x5975f4ab9b15e540
     End
-    RecordSource ="tbl2_StaffDuties"
+    RecordSource ="tbl2_Staff_Duties"
     DatasheetFontName ="Calibri"
     FilterOnLoad =0
     ShowPageMargins =0
@@ -137,7 +137,8 @@ Begin Form
                     TabIndex =1
                     BorderColor =10921638
                     ForeColor =3484194
-                    ColumnInfo ="\"\";\"\";\"\";\"\";\"\";\"\";\"\";\"\";\"10\";\"100\""
+                    ColumnInfo ="\"\";\"\";\"First name *\";\"\";\"Surname *\";\"\";\"k-number *\";\"\";\"10\";\""
+                        "100\""
                     Name ="FK_StaffID"
                     ControlSource ="FK_StaffID"
                     RowSourceType ="Table/Query"
